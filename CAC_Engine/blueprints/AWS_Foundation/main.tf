@@ -1,4 +1,4 @@
-
+/*
 module "vpc_1" {
   source     = "../../modules/aws_vpc"
   cidr_block = var.cidr_block1
@@ -243,3 +243,4 @@ module "aws_dx_gateway" {
   direct_connection_gateway = "${var.prefix}-${var.usecase}-${var.environment}-test1-dx-gateway"
   amazon_side_asn           = var.amazon_side_asn2
 } 
+*/
