@@ -98,7 +98,7 @@ output "backup_vault_arn" {
 /* output "secret_manager_secret_id" {
   value = module.secret.secret_manager_secret_id
 } */
-
+/*
 output "ebs_volume_id" {
   value = module.ebs_volume.ebs_volume_id
 }
