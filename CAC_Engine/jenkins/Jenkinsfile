@@ -36,7 +36,7 @@ pipeline {
                 dir("CAC_Engine/blueprints/${env.BLUEPRINT}") {
                     //sh 'terraform init -backend-config="access_key=${AWS_ACCESS_KEY1}" -backend-config="secret_key=${AWS_SECRET_KEY1}"'
                 // sh 'terraform init -migrate-state'
-                sh '/usr/local/opentofu/tofu init -reconfigure'
+                sh '/usr/local/opentofu/cmd/tofu init -reconfigure'
                 }
             }
         }
@@ -50,7 +50,7 @@ pipeline {
                 dir("CAC_Engine/blueprints/${env.BLUEPRINT}") {
                     sh """
                     echo "STARTApply"
-                    /usr/local/opentofu/tofu apply  -var="aws_access_key1=${AWS_ACCESS_KEY}" -var="aws_secret_key1=${AWS_SECRET_KEY}" -auto-approve
+                    /usr/local/opentofu/cmd/tofu apply  -var="aws_access_key1=${AWS_ACCESS_KEY}" -var="aws_secret_key1=${AWS_SECRET_KEY}" -auto-approve
                     echo "ENDApply"
                     """
                 }
