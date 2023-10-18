@@ -110,4 +110,5 @@ output "backup_plan_id" {
 output "dx_gateway_id" {
   value = module.aws_dx_gateway.dx_gateway_id
 }
+
 */
