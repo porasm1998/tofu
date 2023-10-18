@@ -40,7 +40,7 @@ module "nat_gateway" {
   source            = "../../modules/aws_nat_gateway"
   allocation_id     = var.allocation_id
   private_ip        = var.private_ip
-  subnet_id         = module.subnet_1.subnet_1_id
+  subnet_id         = module.subnet_1.subnet_id 
   connectivity_type = var.connectivity_type
   tags = {
     Name        = "${var.prefix}-${var.usecase}-${var.environment}-test9-nat-gw"
@@ -78,7 +78,7 @@ module "firewall" {
   firewall_name           = "${var.prefix}-${var.usecase}-${var.environment}-firewall"
   vpc_firewall_policy_arn = var.vpc_firewall_policy_arn
   vpc_id                  = module.vpc_1.vpc_id
-  subnet_id               = module.subnet_1.subnet_1_id
+  subnet_id               = module.subnet_1.subnet_id
   key_id                  = module.kms_key.kms_key_id
   tags = {
     Environment = "Dev"
