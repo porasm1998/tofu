@@ -3,7 +3,8 @@ kind: Component
 metadata:
   name: tofu
   annotations:
-    github.com/project-slug: porasm1998/tofu
+    jenkins.io/job-full-name: CAC-Test-1/tofu
+
 spec:
   type: other
   lifecycle: unknown
